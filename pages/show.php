@@ -24,8 +24,11 @@
               <input type='submit' name='delete' value='delete'>
                </form>";
               echo '</tr>';
+              if(isset($_POST['delete'])) {
+                unset($_SESSION['user'][$i]);
+              }
             }
-            
+           
             ?>
           
             </table>
